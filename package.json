@@ -1,0 +1,25 @@
+{
+  "name": "ssl_scan",
+  "version": "0.1.0",
+  "description": "Checks a list of URLs.  Lets you know whether any are about to expire",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "bin": "src/js/cli.js",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/StoneCypher/ssl_scan.git"
+  },
+  "author": "",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/StoneCypher/ssl_scan/issues"
+  },
+  "homepage": "https://github.com/StoneCypher/ssl_scan#readme",
+  "devDependencies": {
+    "command-line-args": "^5.1.1",
+    "command-line-usage": "^5.0.5",
+    "ssl-checker": "^1.2.1"
+  }
+}
