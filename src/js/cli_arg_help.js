@@ -2,8 +2,10 @@
 const args = [
 
   { name: "help", alias: "h",                                                  description: "Print this help text" },
-  { name: "add",  alias: "a", type: String,  typelabel: '{underline address}', description: "Add a URL to the persistent check list" },
-  { name: "once", alias: "o", type: String,  typelabel: '{underline address}', description: "Vet just one URL" }
+  { name: "add",  alias: "a", type: String, typelabel: '{underline address}',  description: "Add a URL to the persistent check list" },
+  { name: "once", alias: "o", type: String, typelabel: '{underline address}',  description: "Vet just one URL" },
+  { name: "cfg",  alias: "c", type: String, typelabel: '{underline filename}', description: "Use the indicated configuration file (defaults to {bold .ssl_scan.json})" },
+  { name: "init", alias: "i",                                                  description: "Create a configuration file {bold .ssl_scan.json} in the current directory" }
 
 ];
 
@@ -17,14 +19,14 @@ const sections = [
   { header: 'Options',   optionList: args },
 
   { header: 'Examples',  content: [
-    { desc: '{bold Basic usage} - scan {underline https://www.google.com/} one time',
-      example: '$ ssl_scan --once https://www.google.com/' },
-    { desc: '{bold Add persistent} - add {underline https://www.microsoft.com/} to the persistent scan list',
-      example: '$ ssl_scan --add https://www.microsoft.com/' },
+    { desc: '{bold Basic usage} - scan {underline www.google.com} one time',
+      example: '$ ssl_scan --once www.google.com' },
+    { desc: '{bold Add persistent} - add {underline www.microsoft.com} to the persistent scan list',
+      example: '$ ssl_scan --add www.microsoft.com' },
     { desc: '{bold Scan} - scan the persistent scan list',
       example: '$ ssl_scan' },
-    { desc: '{bold Remove persistent} - remove {underline https://www.microsoft.com/} from the persistent scan list',
-      example: '$ ssl_scan --remove https://www.microsoft.com/' }
+    { desc: '{bold Remove persistent} - remove {underline www.microsoft.com} from the persistent scan list',
+      example: '$ ssl_scan --remove www.microsoft.com' }
   ] },
 
   { header: 'Reference', content: 'Find reference and a bug tracker at the {bold ssl_scan} webpage, {underline {cyan https://github.com/StoneCypher/ssl_scan/}}' }

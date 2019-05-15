@@ -3,9 +3,9 @@ const ssl_c = require('ssl-checker');
 
 
 
-const vet      = url => console.log(`todo: test ${url}`),
-      get_list = ()  => [ 'a', 'b', 'c' ],
-      vet_list = ()  => get_list().map(vet);
+const vet      = async url => ssl_c(url).then(console.log),
+      get_list = async cfg => cfg.targets,
+      vet_list = async cfg => (await get_list(cfg)).map(vet);
 
 
 

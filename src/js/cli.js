@@ -7,6 +7,15 @@ const arghelp = require('./cli_arg_help.js'),
 
 
 
+const def_cfg = { targets: ['www.microsoft.com', 'www.google.com', 'www.amazon.com'],
+                  color:   true,
+                  output:  'json' },
+
+      cfg_tgt = cli.config || './.ssl_scan.json',
+      cfg     = require('fs').existsSync(cfg_tgt)? require('fs').readFileSync(cfg_tgt) : def_cfg;
+
+
+
 if (cli.help !== undefined) {  // because it's null in 5, sigh
 
   console.log(clu(arghelp.sections));
@@ -16,7 +25,7 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
   if (cli.once) {
   	lib.vet(cli.once);
   } else {
-  	lib.vet_list();
+  	lib.vet_list(cfg);
   }
 
 }
