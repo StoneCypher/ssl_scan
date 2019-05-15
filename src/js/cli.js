@@ -3,7 +3,7 @@
 const arghelp = require('./cli_arg_help.js'),
       cli     = require('command-line-args')(arghelp.args),
       clu     = require('command-line-usage'),
-      ssl_c   = require('ssl-checker');
+      lib     = require('./lib.js');
 
 
 
@@ -13,6 +13,10 @@ if (cli.help !== undefined) {  // because it's null in 5, sigh
 
 } else {
 
-
+  if (cli.once) {
+  	lib.vet(cli.once);
+  } else {
+  	lib.vet_list();
+  }
 
 }
