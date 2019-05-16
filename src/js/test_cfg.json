@@ -1,0 +1,4 @@
+{ "targets"   : ["www.microsoft.com", "www.google.com", "www.amazon.com", "www.apple.com"],
+  "warn_days" : 14,
+  "color"     : true,
+  "output"    : "json" }

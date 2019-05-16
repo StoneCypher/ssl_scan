@@ -1,0 +1,3 @@
+{ "targets": ["www.microsoft.com", "www.google.com", "www.amazon.com", "www.apple.com"],
+  "color":   true,
+  "output":  "json" }

@@ -18,6 +18,7 @@
   },
   "homepage": "https://github.com/StoneCypher/ssl_scan#readme",
   "devDependencies": {
+    "chalk": "^2.4.2",
     "command-line-args": "^5.1.1",
     "command-line-usage": "^5.0.5",
     "ssl-checker": "^1.2.1"

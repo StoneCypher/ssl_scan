@@ -1,11 +1,12 @@
 
 const args = [
 
-  { name: "help", alias: "h",                                                  description: "Print this help text" },
-  { name: "add",  alias: "a", type: String, typelabel: '{underline address}',  description: "Add a URL to the persistent check list" },
-  { name: "once", alias: "o", type: String, typelabel: '{underline address}',  description: "Vet just one URL" },
-  { name: "cfg",  alias: "c", type: String, typelabel: '{underline filename}', description: "Use the indicated configuration file (defaults to {bold .ssl_scan.json})" },
-  { name: "init", alias: "i",                                                  description: "Create a configuration file {bold .ssl_scan.json} in the current directory" }
+  { name: "help",     alias: "h",                                                  description: "Print this help text" },
+  { name: "add",      alias: "a", type: String, typelabel: '{underline address}',  description: "Add a URL to the persistent check list" },
+  { name: "once",     alias: "o", type: String, typelabel: '{underline address}',  description: "Vet just one URL" },
+  { name: "config",   alias: "c", type: String, typelabel: '{underline filename}', description: "Use the indicated configuration file (defaults to {bold .ssl_scan.json})" },
+  { name: "reporter", alias: "r", type: String, typelabel: '{underline reporter}', description: "Choose a reporter for the data, such as color_table, table, or json" },
+  { name: "init",     alias: "i",                                                  description: "Create a configuration file {bold .ssl_scan.json} in the current directory" }
 
 ];
 
